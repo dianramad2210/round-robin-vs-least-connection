@@ -1,0 +1,354 @@
+/* =========================
+THEME
+========================= */
+
+:root{
+    --cream:#FFF8F0;
+    --peach:#FFD6BA;
+    --peach-dark:#F4A261;
+    --brown:#8D6E63;
+    --white:#FFFFFF;
+}
+
+/* =========================
+GLOBAL
+========================= */
+
+body{
+    background-color:var(--cream);
+    font-family:"Segoe UI",Tahoma,Geneva,Verdana,sans-serif;
+    color:#212529;
+}
+
+.container{
+    max-width:1400px;
+}
+
+/* =========================
+HEADER
+========================= */
+
+h2{
+    font-weight:700;
+    margin-bottom:20px;
+    color:var(--brown);
+}
+
+h4{
+    font-weight:600;
+    margin-bottom:15px;
+    color:var(--brown);
+}
+
+h5{
+    font-weight:600;
+}
+
+/* =========================
+NAVIGATION TABS
+========================= */
+
+.nav-tabs{
+    border-bottom:2px solid #e4d6cb;
+}
+
+.nav-tabs .nav-link{
+    border:none;
+    color:#6c757d;
+    font-weight:500;
+    padding:12px 20px;
+}
+
+.nav-tabs .nav-link:hover{
+    background-color:#fff3ea;
+}
+
+.nav-tabs .nav-link.active{
+    color:var(--brown);
+    background-color:white;
+    border-bottom:3px solid var(--peach-dark);
+}
+
+/* =========================
+ALERT BOX
+========================= */
+
+.alert{
+    border:none;
+    border-radius:14px;
+    font-size:14px;
+}
+
+.alert-primary{
+    background:#ffe9d6;
+    color:#6d4c41;
+}
+
+.alert-success{
+    background:#fff0e2;
+    color:#6d4c41;
+}
+
+.alert-info{
+    background:#fff4eb;
+    color:#6d4c41;
+}
+
+/* =========================
+BUS CARD
+========================= */
+
+.server-card{
+    background:white;
+    border-radius:14px;
+    padding:18px;
+    margin-bottom:15px;
+
+    border-left:6px solid var(--peach-dark);
+
+    box-shadow:
+        0 2px 6px rgba(0,0,0,0.08);
+
+    transition:all .2s ease;
+}
+
+.server-card:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:
+        0 6px 16px rgba(0,0,0,0.12);
+}
+
+.server-card h5{
+    margin-bottom:10px;
+}
+
+.server-card p{
+    margin-bottom:8px;
+}
+
+/* =========================
+PROGRESS BAR
+========================= */
+
+.progress{
+    height:12px;
+    border-radius:10px;
+    background-color:#f3e6dc;
+}
+
+.progress-bar{
+    background-color:var(--peach-dark)!important;
+    transition:width .4s ease;
+}
+
+/* =========================
+STATISTIC CARD
+========================= */
+
+.card{
+    border:none;
+    border-radius:14px;
+
+    box-shadow:
+        0 2px 6px rgba(0,0,0,0.08);
+}
+
+.card-body p{
+    margin-bottom:10px;
+}
+
+/* =========================
+QUEUE PANEL
+========================= */
+
+.queue-box{
+
+    min-height:130px;
+
+    background:white;
+
+    border-radius:14px;
+
+    padding:12px;
+
+    box-shadow:
+        0 2px 6px rgba(0,0,0,0.08);
+}
+
+.badge-request{
+
+    font-size:13px;
+
+    padding:8px 10px;
+
+    margin:3px;
+
+    border-radius:8px;
+}
+
+/* =========================
+LOG PANEL
+========================= */
+
+.log-box{
+
+    background:#4e342e;
+
+    color:#fff8f0;
+
+    border-radius:14px;
+
+    padding:15px;
+
+    height:260px;
+
+    overflow-y:auto;
+
+    font-family:Consolas,monospace;
+
+    font-size:13px;
+
+    line-height:1.6;
+}
+
+.log-box::-webkit-scrollbar{
+    width:8px;
+}
+
+.log-box::-webkit-scrollbar-track{
+    background:#6d4c41;
+}
+
+.log-box::-webkit-scrollbar-thumb{
+    background:#bcaaa4;
+    border-radius:4px;
+}
+
+/* =========================
+BUTTONS
+========================= */
+
+.btn{
+    border-radius:10px;
+    font-weight:500;
+    padding:8px 16px;
+}
+
+.btn-success{
+    background:var(--peach-dark);
+    border:none;
+
+    box-shadow:
+        0 2px 6px rgba(244,162,97,.35);
+}
+
+.btn-success:hover{
+    background:#e8924f;
+}
+
+.btn-danger{
+
+    box-shadow:
+        0 2px 6px rgba(220,53,69,.3);
+}
+
+/* =========================
+SLIDER
+========================= */
+
+.form-range::-webkit-slider-thumb{
+    background:var(--peach-dark);
+}
+
+.form-range::-moz-range-thumb{
+    background:var(--peach-dark);
+}
+
+#speedLabel{
+    font-weight:600;
+    color:var(--brown);
+}
+
+/* =========================
+MONITORING
+========================= */
+
+#compareRR .server-card{
+    border-left:6px solid #f4a261;
+}
+
+#compareLC .server-card{
+    border-left:6px solid #e76f51;
+}
+
+/* =========================
+TABLET
+========================= */
+
+@media (max-width:992px){
+
+    .server-card{
+        padding:15px;
+    }
+
+    .log-box{
+        height:220px;
+    }
+}
+
+/* =========================
+MOBILE
+========================= */
+
+@media (max-width:768px){
+
+    h2{
+        font-size:24px;
+    }
+
+    .btn{
+        width:100%;
+        margin-bottom:8px;
+    }
+
+    .queue-box{
+        min-height:auto;
+    }
+
+    .log-box{
+        height:200px;
+    }
+}
+
+/* =========================
+ANIMATION
+========================= */
+
+@keyframes pulseBus{
+
+    0%{
+        transform:scale(1);
+    }
+
+    50%{
+        transform:scale(1.02);
+    }
+
+    100%{
+        transform:scale(1);
+    }
+}
+
+.server-card.active{
+    animation:pulseBus .5s ease;
+}
+
+/* =========================
+FOOTER
+========================= */
+
+.tab-pane{
+    padding-bottom:30px;
+}
